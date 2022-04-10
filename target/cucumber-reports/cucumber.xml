@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="291.75">
+    <testcase classname="Attendanywhere User Login Test" name="URL is leading us into the correct page" time="14.724">
+        <system-out><![CDATA[Given user opens the browser................................................passed
+When user enters the URL....................................................passed
+Then validate User is on sign in page.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="display hints for the username and password fields" time="13.919">
+        <system-out><![CDATA[Given the user nevigate to login url........................................passed
+When the user checks username text field....................................passed
+And the user checks password text field.....................................passed
+Then username displays hint as email........................................passed
+And password displays hint as password......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="validate that checkbox 'Keep me signed in' is positioned between password field and sign in button" time="15.109">
+        <system-out><![CDATA[Given the user nevigate to url..............................................passed
+When the user reaches Keep me Signed in checkbox............................passed
+Then Validate 'keep me signed in' checbox is between password and sign button.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="validate that forgot your password? link is displayed below Sign in button" time="26.271">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),'Forgot password?')]&quot;}&#10;  (Session info: chrome=100.0.4896.75)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c1c23dda9932c331860084ef4ee94ad5, findElement {using=xpath, value=//a[contains(text(),'Forgot password?')]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Kashan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51825/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c1c23dda9932c331860084ef4ee94ad5" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given the user nevigate to url..............................................passed
+When the user reaches Forgot your password link.............................failed
+Then Validate Forgot your password link is below sign in button.............skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Forgot password?')]"}
+  (Session info: chrome=100.0.4896.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c1c23dda9932c331860084ef4ee94ad5, findElement {using=xpath, value=//a[contains(text(),'Forgot password?')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Kashan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51825/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c1c23dda9932c331860084ef4ee94ad5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at pageObject.SigninPage.getForgotPass(SigninPage.java:45)
+	at stepDefination.Test4.the_user_reaches_forgot_your_password_link(Test4.java:21)
+	at ✽.the user reaches Forgot your password link(file:///C:/Users/Kashan/eclipse-workspace1/Assignment/src/test/java/Features/UserLogin.feature:22)
+]]></failure>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="validate that all fields are visible and fields should not overlap when" time="51.099">
+        <failure message="Could not start a new session. Response code 500. Message: session not created&#10;from disconnected: received Inspector.detached event&#10;  (Session info: chrome=100.0.4896.75)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]" type="org.openqa.selenium.SessionNotCreatedException"><![CDATA[Given the user nevigate to url..............................................passed
+When the user reduced the browser to minimum width..........................failed
+Then validate that all fields are visible and clickable.....................skipped
+
+StackTrace:
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=100.0.4896.75)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:151)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:104)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:91)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:46)
+	at Resource.Base.initializedriver(Base.java:27)
+	at stepDefination.Test5.the_user_reduced_the_browser_to_minimum_width(Test5.java:23)
+	at ✽.the user reduced the browser to minimum width(file:///C:/Users/Kashan/eclipse-workspace1/Assignment/src/test/java/Features/UserLogin.feature:27)
+]]></failure>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="Enter invalid Email address and Password, an error message should be displayed" time="53.191">
+        <failure message="Unable to find element with locator By.cssSelector: #usernameInput&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given the user nevigate to url..............................................passed
+When the user enters invalid email..........................................failed
+And the user enters invalid password........................................skipped
+Then display the error message..............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.cssSelector: #usernameInput
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at pageObject.SigninPage.getUsername(SigninPage.java:25)
+	at stepDefination.Test6.the_user_enters_invalid_email(Test6.java:23)
+	at ✽.the user enters invalid email(file:///C:/Users/Kashan/eclipse-workspace1/Assignment/src/test/java/Features/UserLogin.feature:32)
+]]></failure>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="Enter valid Email address and Password in the respective fields" time="25.573">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#usernameInput&quot;}&#10;  (Session info: chrome=100.0.4896.75)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [57e842f79a4241a8218aacf99633dd63, findElement {using=css selector, value=#usernameInput}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Kashan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:58010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58010/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 57e842f79a4241a8218aacf99633dd63" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given the user nevigate to url..............................................passed
+When the user enters the valid email........................................failed
+And the user enters the valid password......................................skipped
+Then validate that User can enter the details as expected...................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#usernameInput"}
+  (Session info: chrome=100.0.4896.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57e842f79a4241a8218aacf99633dd63, findElement {using=css selector, value=#usernameInput}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Kashan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:58010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58010/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 57e842f79a4241a8218aacf99633dd63
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at pageObject.SigninPage.getUsername(SigninPage.java:25)
+	at stepDefination.Test7.the_user_enters_valid_email(Test7.java:24)
+	at ✽.the user enters the valid email(file:///C:/Users/Kashan/eclipse-workspace1/Assignment/src/test/java/Features/UserLogin.feature:38)
+]]></failure>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="user can sign into the application when entered correct credentials" time="91.555">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#usernameInput&quot;}&#10;  (Session info: chrome=100.0.4896.75)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [5e50ec70d8dd1aa3328327da013817c2, findElement {using=css selector, value=#usernameInput}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Kashan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51090}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51090/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5e50ec70d8dd1aa3328327da013817c2" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given the user nevigate to url..............................................passed
+When the user enters valid email............................................failed
+And the user enters valid password..........................................skipped
+Then validate that user is into the homepage................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#usernameInput"}
+  (Session info: chrome=100.0.4896.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'BABA-RASHEED', ip: '192.168.18.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5e50ec70d8dd1aa3328327da013817c2, findElement {using=css selector, value=#usernameInput}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Kashan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51090}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51090/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5e50ec70d8dd1aa3328327da013817c2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at pageObject.SigninPage.getUsername(SigninPage.java:25)
+	at stepDefination.Test8.the_user_enters_valid_email(Test8.java:27)
+	at ✽.the user enters valid email(file:///C:/Users/Kashan/eclipse-workspace1/Assignment/src/test/java/Features/UserLogin.feature:44)
+]]></failure>
+    </testcase>
+</testsuite>
