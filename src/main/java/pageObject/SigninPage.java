@@ -11,7 +11,7 @@ public class SigninPage {
 	By Password = By.cssSelector("#passwordInput");
 	By KeepmeIn = By.xpath("//label[contains(text(),'Keep me signed in for today')]");
 	By signIn = By.cssSelector("button[type='button']");
-	By ErrorText = By.cssSelector("span[class*='color-white text-size-l')]");
+	By ErrorText = By.xpath("//span[contains(text(),'Your email or password is incorrect. After 5 attem')]");
 	By ForgotPass = By.cssSelector("a[class*='color-login-links']");
 	By donthaveAccount= By.xpath("//a[contains(text(),\"Don't have an account?\")]");
 	By sendButtonEmaiForgotPassword= By.cssSelector("button[data-group='forgotPasswordForm']");

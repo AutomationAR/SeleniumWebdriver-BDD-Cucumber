@@ -104,7 +104,6 @@ public class Test1 extends Base{
     }
     @When("^the user reaches Forgot your password link")
     public void the_user_reaches_forgot_your_password_link() throws Throwable {
-    	driver = initializedriver();
     	SigninPage j= new SigninPage(driver);
     	String N=j.getForgotPass().getText();
     	System.out.println(N);
