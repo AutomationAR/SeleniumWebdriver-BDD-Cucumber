@@ -66,8 +66,9 @@ public class Test1 extends Base{
     public void username_displays_hint_as_email() throws Throwable {
     	SigninPage j= new SigninPage(driver);
     	Actions action = new Actions(driver);
-    	action.moveToElement(j.getUsername()).click().build().perform();
-    	WebElement HintEmail = driver.findElement(By.xpath("//span[contains(text(),'Enter your email address')]"));
+    	j.getPassword().click();
+    	action.moveToElement(j.getwarnmessage()).click().build().perform();
+    	WebElement HintEmail = driver.findElement(By.cssSelector("span[classname='error-color']"));
     	String HE = HintEmail.getText();
     	HE.compareToIgnoreCase("Enter your email address");
     	System.out.println("Username Hint Text=" +HE);
@@ -79,9 +80,8 @@ public class Test1 extends Base{
     public void password_displays_hint_as_password() throws Throwable {
     	SigninPage j= new SigninPage(driver);
     	Actions action = new Actions(driver);
-    	j.getPassword().click();
-    	action.moveToElement(j.getwarnmessage()).click().build().perform();
-    	WebElement Hintpass = driver.findElement(By.xpath("span[classname='error-color']"));
+    	action.moveToElement(j.getPassword()).click().build().perform();
+    	WebElement Hintpass = driver.findElement(By.xpath("//span[contains(text(),'Enter your email address')]"));
     	String HP = Hintpass.getText();
     	HP.compareToIgnoreCase("Enter your password");
     	System.out.println("Username Hint Text=" +HP);
