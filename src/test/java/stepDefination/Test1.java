@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import Resource.Base;
 import io.cucumber.java.en.And;
@@ -64,18 +65,26 @@ public class Test1 extends Base{
     @Then("^username displays hint as email")
     public void username_displays_hint_as_email() throws Throwable {
     	SigninPage j= new SigninPage(driver);
-    	String UsernameText=j.getUsername().getText();
-    	UsernameText.equalsIgnoreCase("Email");
-    	System.out.println("Username Hint Text=" +UsernameText);
+    	Actions action = new Actions(driver);
+    	action.moveToElement(j.getUsername()).click().build().perform();
+    	WebElement HintEmail = driver.findElement(By.xpath("//span[contains(text(),'Enter your email address')]"));
+    	String HE = HintEmail.getText();
+    	HE.compareToIgnoreCase("Enter your email address");
+    	System.out.println("Username Hint Text=" +HE);
+    	j.getUsername().sendKeys(pop.getProperty("invalidusername"));
     	
         
     }
     @And("^password displays hint as password")
     public void password_displays_hint_as_password() throws Throwable {
     	SigninPage j= new SigninPage(driver);
-    	String PasswordText=j.getPassword().getText();
-    	PasswordText.equalsIgnoreCase("Password");
-    	System.out.println("Password Hint Text=" +PasswordText);
+    	Actions action = new Actions(driver);
+    	j.getPassword().click();
+    	action.moveToElement(j.getwarnmessage()).click().build().perform();
+    	WebElement Hintpass = driver.findElement(By.xpath("span[classname='error-color']"));
+    	String HP = Hintpass.getText();
+    	HP.compareToIgnoreCase("Enter your password");
+    	System.out.println("Username Hint Text=" +HP);
     }
     @Given("^the user nevigate to url")
     public void the_user_nevigate_to_url() throws Throwable {
@@ -230,8 +239,11 @@ public class Test1 extends Base{
     	{
     		System.out.println("user is into the homepage");
     	}
+    	
+    }
+    @And("^close all browser$")
+    public void close_all_browser() throws Throwable {
+        driver.quit();
+    }
 
-
-
-}
 }

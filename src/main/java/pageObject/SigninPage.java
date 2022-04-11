@@ -10,11 +10,12 @@ public class SigninPage {
 	By UserName = By.cssSelector("#usernameInput");
 	By Password = By.cssSelector("#passwordInput");
 	By KeepmeIn = By.xpath("//label[contains(text(),'Keep me signed in for today')]");
-	By signIn = By.cssSelector("button[type='button']");
+	By signIn = By.cssSelector("button[class*='ui labeled icon button color-button']");
 	By ErrorText = By.xpath("//span[contains(text(),'Your email or password is incorrect. After 5 attem')]");
 	By ForgotPass = By.cssSelector("a[class*='color-login-links']");
-	By donthaveAccount= By.xpath("//a[contains(text(),\"Don't have an account?\")]");
+	By donthaveAccount= By.linkText("Don't have an account?");
 	By sendButtonEmaiForgotPassword= By.cssSelector("button[data-group='forgotPasswordForm']");
+	By warnmessage = By.cssSelector("i[class*='error-checkmark']");
 	
 	public SigninPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -52,6 +53,11 @@ public class SigninPage {
 	{
 		return driver.findElement(sendButtonEmaiForgotPassword);
 	}
+	public WebElement getwarnmessage()
+	{
+		return driver.findElement(warnmessage);
+	}
+	
 	
 	
 }

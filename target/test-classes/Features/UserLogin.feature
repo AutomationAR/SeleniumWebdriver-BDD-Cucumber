@@ -44,4 +44,5 @@ Feature: Attendanywhere User Login Test
     When the user enters valid email
     And the user enters valid password 
     Then validate that user is into the homepage
+    And close all browser
     
