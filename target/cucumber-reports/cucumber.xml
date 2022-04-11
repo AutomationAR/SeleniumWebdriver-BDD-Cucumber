@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="243.863">
+    <testcase classname="Attendanywhere User Login Test" name="URL is leading us into the correct page" time="10.176">
+        <system-out><![CDATA[Given user opens the browser................................................passed
+When user enters the URL....................................................passed
+Then validate User is on sign in page.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="display hints for the username and password fields" time="21.545">
+        <system-out><![CDATA[Given the user nevigate to login url........................................passed
+When the user checks username text field....................................passed
+And the user checks password text field.....................................passed
+Then username displays hint as email........................................passed
+And password displays hint as password......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="validate that checkbox 'Keep me signed in' is positioned between password field and sign in button" time="14.69">
+        <system-out><![CDATA[Given the user nevigate to url..............................................passed
+When the user reaches Keep me Signed in checkbox............................passed
+Then Validate 'keep me signed in' checbox is between password and sign button.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="validate that forgot your password? link is displayed below Sign in button" time="12.767">
+        <system-out><![CDATA[Given the user nevigate to url..............................................passed
+When the user reaches Forgot your password link.............................passed
+Then Validate Forgot your password link is below sign in button.............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="validate that all fields are visible and fields should not overlap when" time="47.246">
+        <system-out><![CDATA[Given the user nevigate to url..............................................passed
+When the user reduced the browser to minimum width..........................passed
+Then validate that all fields are visible and clickable.....................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="Enter invalid Email address and Password, an error message should be displayed" time="43.937">
+        <system-out><![CDATA[Given the user nevigate to url..............................................passed
+When the user enters invalid email..........................................passed
+And the user enters invalid password........................................passed
+Then display the error message..............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="Enter valid Email address and Password in the respective fields" time="65.773">
+        <system-out><![CDATA[Given the user nevigate to url..............................................passed
+When the user enters the valid email........................................passed
+And the user enters the valid password......................................passed
+Then validate that User can enter the details as expected...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Attendanywhere User Login Test" name="user can sign into the application when entered correct credentials" time="27.052">
+        <system-out><![CDATA[Given the user nevigate to url..............................................passed
+When the user enters valid email............................................passed
+And the user enters valid password..........................................passed
+Then validate that user is into the homepage................................passed
+And close all browser.......................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
