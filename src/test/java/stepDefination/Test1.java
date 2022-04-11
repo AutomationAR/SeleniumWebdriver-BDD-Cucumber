@@ -81,7 +81,7 @@ public class Test1 extends Base{
     	SigninPage j= new SigninPage(driver);
     	Actions action = new Actions(driver);
     	action.moveToElement(j.getPassword()).click().build().perform();
-    	WebElement Hintpass = driver.findElement(By.xpath("//span[contains(text(),'Enter your email address')]"));
+    	WebElement Hintpass = driver.findElement(By.xpath("//span[contains(text(),'Enter your password')]"));
     	String HP = Hintpass.getText();
     	HP.compareToIgnoreCase("Enter your password");
     	System.out.println("Username Hint Text=" +HP);
